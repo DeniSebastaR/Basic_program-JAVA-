@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        int b=a;
+        int count=0;
+        int r=0;
+        int ans=0;
+        while(b>0){
+            b=b/10;
+            count++;
+        }
+        b=a;
+        while(b>0){
+            r=b%10;
+            b=b/10;
+            ans=ans+(int)(Math.pow(r,count));
+        }
+        System.out.println((ans==a)?"Armstrong":"Not Armstrong");
+    }
+}
